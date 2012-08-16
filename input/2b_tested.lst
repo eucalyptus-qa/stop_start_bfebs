@@ -1,0 +1,32 @@
+TEST_NAME	vic-vnx
+UNIQUE_ID	1004
+EMAIL	vic.iglesias@eucalyptus.com
+PXE_TYPE	QAIMAGE
+BUILD_TYPE	NORMAL
+TEST_SEQ	build-n-conf-eee-01
+NETWORK	MANAGED
+SUBNET_IP	10.174.64.0
+MANAGED_IPS	192.168.46.58 192.168.46.59 192.168.46.60 192.168.46.61
+BZR_BRANCH	sftp://root@192.168.7.1/home/repositories/eucalyptus/eee
+BZR_REVISION	0
+GIT_REPO	git+ssh://repo-euca@git.eucalyptus-systems.com/internal#team/storage/emc-release
+GIT_HASH	b802b454ea1289313cd6310c59f545aed8e681df
+
+192.168.51.96	RHEL	6.2	64	REPO	[CLC WS SC00 CC00]
+192.168.51.97	RHEL	6.2	64	REPO	[CLC WS SC00 CC00]
+192.168.51.149	RHEL	6.2	64	REPO	[NC00]
+
+MEMO
+CLOUD_OPTS=--debug --log-level=EXTREME --db-home=/usr/pgsql-9.1/
+
+EBS_STORAGE_MANAGER=SANManager
+SAN_PROVIDER=EmcVnxProvider
+
+SET_VNET_NETMASK=255.255.240.0
+
+EXTRA_REPO=pgrpms http://yum.pgrpms.org/9.1/redhat/rhel-6-x86_64/
+EXTRA_REPO=elrepo http://mirror.eucalyptus/elrepo/el6/x86_64/
+USE_EPEL_REPO=YES
+
+EXTRA_PKG=postgresql91-server PyGreSQL git
+END_MEMO

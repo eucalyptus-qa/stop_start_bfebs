@@ -1,0 +1,72 @@
+
+CMD : ec2-describe-addresses
+
+ADDRESS	192.168.10.130	i-6BAE40B5 (arn:aws:euare::000000000000:user/eucalyptus)
+ADDRESS	192.168.10.131	i-B577412D (arn:aws:euare::000000000000:user/eucalyptus)
+ADDRESS	192.168.10.132	nobody
+ADDRESS	192.168.10.133	nobody
+ADDRESS	192.168.10.134	nobody
+ADDRESS	192.168.10.135	nobody
+ADDRESS	192.168.10.136	nobody
+ADDRESS	192.168.10.137	nobody
+ADDRESS	192.168.10.138	nobody
+ADDRESS	192.168.10.139	nobody
+
+CMD : ec2-describe-availability-zones
+
+AVAILABILITYZONE	zero	192.168.51.96 arn:euca:eucalyptus:zero:cluster:CC-00/	
+
+CMD : ec2-describe-bundle-tasks
+
+
+CMD : ec2-describe-group
+
+GROUP	004154551325	default	default group
+PERMISSION	004154551325	default	ALLOWS	tcp	0	0	FROM	CIDR	0.0.0.0/0
+PERMISSION	004154551325	default	ALLOWS	icmp	0	0	FROM	CIDR	0.0.0.0/0
+
+CMD : ec2-describe-image-attribute
+
+An AMI ID must be specified. (-h for usage)
+
+CMD : ec2-describe-images
+
+IMAGE	emi-38F832D6	precise-server-922c3aa3-image-bucket/precise-server-cloudimg-amd64-ext3.img.manifest.xml	004154551325	available	public		i386	machine	eki-16113848	eri-B45239FC	
+IMAGE	eki-16113848	precise-server-922c3aa3-kernel-bucket/vmlinuz-3.2.0-23-virtual.manifest.xml	000000000001	available	public		i386	kernel			
+IMAGE	eri-B45239FC	precise-server-922c3aa3-ramdisk-bucket/initrd.img-3.2.0-23-virtual.manifest.xml	000000000001	available	public		i386	ramdisk			
+IMAGE	emi-C2293DA7	precise-stress/precise-server.manifest.xml	004154551325	available	public		i386	machine	eki-16113848	eri-B45239FC	
+
+CMD : ec2-describe-instances
+
+RESERVATION	r-7F9B3E97	004154551325	default
+INSTANCE	i-B577412D	emi-C2293DA7	192.168.10.131	10.179.16.211	running	vic	0		m1.large	2012-08-15T00:48:09+0000	zero	eki-16113848	eri-B45239FC	
+RESERVATION	r-575340B2	004154551325	default
+INSTANCE	i-6BAE40B5	emi-38F832D6	192.168.10.130	10.179.16.210	running	vic	0		m1.large	2012-08-15T00:26:10+0000	zero	eki-16113848	eri-B45239FC	
+RESERVATION	r-97CB3EE8	004154551325	
+INSTANCE	i-494640DF	emi-C2293DA7	10.179.72.111	10.179.72.111	terminated	keypair-1345002362.8	0		m1.small	2012-08-15T03:46:02+0000	zero	eki-16113848	eri-B45239FC	
+
+CMD : ec2-describe-keypair
+
+KEYPAIR	vic	07:eb:24:20:fa:c6:69:e5:46:42:b3:b1:59:98:a0:3e:8f:d4:7f:a4
+
+CMD : ec2-describe-regions
+
+REGION	eucalyptus	http://192.168.51.96:8773/services/Eucalyptus
+REGION	walrus	http://192.168.51.96:8773/services/Walrus
+
+CMD : ec2-describe-reserved_instances
+
+
+CMD : ec2-describe-instances-offerings
+
+
+CMD : ec2-describe-snapshots
+
+
+CMD : ec2-describe-volumes
+
+VOLUME	vol-116D3D47	5		zero	in-use	2012-08-14T22:34:30+0000
+ATTACHMENT	vol-116D3D47	i-6BAE40B5	/dev/vdb	attached	2012-08-15T00:30:26+0000
+
+CMD : ec2-describe-availability-zones coredump
+
